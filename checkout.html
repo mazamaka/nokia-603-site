@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Оформление заказа — Nokia 603</title>
+  <meta name="description" content="Оформление заказа Nokia 603: доставка Новой Почтой, оплата при получении, онлайн или частями.">
+  <meta name="theme-color" content="#000000">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap&subset=cyrillic">
+  <link rel="stylesheet" href="assets/css/site.css?v=11">
+</head>
+<body data-page="checkout">
+  <a class="visually-hidden" href="#main">Перейти к содержимому</a>
+
+  <nav class="gnav" aria-label="Основная навигация">
+    <div class="wrap">
+      <a class="gnav__logo" href="index.html" aria-label="Nokia — на главную">
+        <svg viewBox="0 0 120 20" aria-hidden="true"><text x="0" y="17" fill="currentColor" font-family="Avenir Next, Montserrat, Inter, Arial, sans-serif" font-weight="600" font-size="20" letter-spacing="1.5" textLength="118" lengthAdjust="spacingAndGlyphs">NOKIA</text></svg>
+      </a>
+      <ul class="gnav__links">
+        <li><a href="index.html">Nokia 603</a></li>
+        <li><a href="specs.html">Характеристики</a></li>
+        <li><a href="buy.html">Купить</a></li>
+      </ul>
+      <div class="gnav__tools">
+        <button class="bag-btn" type="button" data-open-bag aria-label="Корзина">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"><path d="M2.5 5.5h11l-.8 9h-9.4z"/><path d="M5.5 5.5V4a2.5 2.5 0 015 0v1.5"/></svg>
+          <span class="bag-btn__count" data-bag-count hidden>0</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main" class="section" style="padding-top:72px">
+    <div class="wrap" data-checkout-wrap>
+      <div class="section-head">
+        <h1 class="t-h2">Оформление заказа.</h1>
+        <p class="t-lead">Доставка Новой Почтой — бесплатно. Проверьте телефон при получении и только потом платите.</p>
+        <p class="demo-note" data-demo-note hidden><b>Демо-режим.</b> Витрина пока не принимает заказы — данные формы никуда не отправляются.</p>
+      </div>
+
+      <div class="checkout">
+        <form class="checkout__form" data-checkout novalidate>
+          <fieldset class="fieldset">
+            <legend>Контакты</legend>
+            <div class="fields">
+              <div class="field"><label for="fname">Имя</label><input id="fname" name="firstName" autocomplete="given-name" required><span class="field__err"></span></div>
+              <div class="field"><label for="lname">Фамилия</label><input id="lname" name="lastName" autocomplete="family-name" required><span class="field__err"></span></div>
+              <div class="field"><label for="phone">Телефон</label><input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+380 (XX) XXX-XX-XX" required><span class="field__err"></span></div>
+              <div class="field"><label for="email">Email — по желанию</label><input id="email" name="email" type="email" autocomplete="email" placeholder="name@example.com"><span class="field__err"></span></div>
+            </div>
+          </fieldset>
+
+          <fieldset class="fieldset">
+            <legend>Доставка</legend>
+            <div class="radio-cards" style="margin-bottom:16px">
+              <input type="radio" id="dl-branch" name="delivery" value="branch" checked><label for="dl-branch"><span><b>В отделение Новой Почты</b><span>Обычно 1–2 дня</span></span><span>Бесплатно</span></label>
+              <input type="radio" id="dl-locker" name="delivery" value="locker"><label for="dl-locker"><span><b>В почтомат</b><span>Удобно забрать в любое время</span></span><span>Бесплатно</span></label>
+              <input type="radio" id="dl-courier" name="delivery" value="courier"><label for="dl-courier"><span><b>Курьером до двери</b><span>Обычно 1–2 дня</span></span><span>Бесплатно</span></label>
+            </div>
+            <div class="fields" data-delivery-fields></div>
+          </fieldset>
+
+          <fieldset class="fieldset">
+            <legend>Оплата</legend>
+            <div class="radio-cards">
+              <input type="radio" id="pay-cod" name="payment" value="cod" checked><label for="pay-cod"><span><b>При получении</b><span>Наличными или картой в отделении после проверки</span></span></label>
+              <input type="radio" id="pay-card" name="payment" value="card"><label for="pay-card"><span><b>Картой онлайн</b><span>Пришлём защищённую ссылку на оплату после подтверждения заказа</span></span></label>
+              <input type="radio" id="pay-parts" name="payment" value="parts"><label for="pay-parts"><span><b>Оплата частями</b><span>6 платежей без переплаты — оформим после звонка менеджера</span></span></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="fieldset">
+            <legend>Комментарий</legend>
+            <div class="field field--full"><label for="comment">Например, наклеить защитное стекло или удобное время звонка</label><textarea id="comment" name="comment" maxlength="500"></textarea></div>
+          </fieldset>
+
+          <button class="btn btn--buy btn--lg btn--block" type="submit" data-submit>Подтвердить заказ</button>
+          <p class="t-small muted" style="margin-top:14px">Нажимая «Подтвердить заказ», вы соглашаетесь на обработку контактных данных для доставки. Мы не просим данные карты на этой странице.</p>
+        </form>
+
+        <aside class="order-box" data-order-box aria-label="Ваш заказ">
+          <h2>Ваш заказ</h2>
+          <div data-order-lines></div>
+          <div class="order-box__sum">
+            <div><span>Товары</span><span data-order-sub>0&nbsp;₴</span></div>
+            <div><span>Доставка</span><span>Бесплатно</span></div>
+            <div class="is-total"><span>Итого</span><span data-order-total>0&nbsp;₴</span></div>
+          </div>
+          <p class="t-small muted" style="margin:14px 0 0"><a href="buy.html" class="link-arrow">Изменить конфигурацию</a></p>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__legal">
+        <span>© 2026. Концепт-сайт магазина. Nokia и Symbian — товарные знаки своих правообладателей; сайт не связан с Nokia Corporation и HMD Global.</span>
+        <span><a href="index.html">Обзор</a> · <a href="specs.html">Характеристики</a> · <a href="buy.html">Купить</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="drawer-backdrop" data-close-bag></div>
+  <aside class="drawer" aria-label="Корзина" aria-hidden="true" data-drawer></aside>
+  <div class="toast" role="status" aria-live="polite" data-toast></div>
+  <script src="assets/js/site.js?v=5" defer></script>
+</body>
+</html>
